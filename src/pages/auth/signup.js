@@ -3,9 +3,10 @@ import Link from "next/link";
 import toast from "react-hot-toast";
 import axios from "axios";
 import qs from "qs";
-import {useState} from "react";
+import { useState } from "react";
 import { UilArrowRight } from "@iconscout/react-unicons";
 import Image from "next/image";
+import {Text} from "@nextui-org/react";
 
 export default () => {
   const [firstName, setFirstName] = useState("");
@@ -59,38 +60,31 @@ export default () => {
       <div className="flex flex-col md:flex-row items-center justify-center h-screen bg-gray-200">
         <div className="w-1/2 pt-8 my-8 flex flex-col justify-center items-center text-lg md:flex-row md:text-xl md:justify-between">
           <ol className="space-y-4 w-72">
-            <li>
               <div
                 className="w-full p-4 text-orange-700 bg-orange-100 border border-orange-300 rounded-lg shadow"
                 role="alert"
               >
                 <div className="flex items-center justify-between">
-                  <h3 className="font-medium">1. Account Information</h3>
+                  <Text h3 className="font-medium">1. Account Information</Text>
                   <UilArrowRight size="26" />
                 </div>
               </div>
-            </li>
-            <li>
               <div
                 className="w-full p-4 text-gray-900 bg-gray-100 border border-gray-300 rounded-lg shadow"
                 role="alert"
               >
                 <div className="flex items-center justify-between">
-                  <h3 className="font-medium">2. Account Confirmation</h3>
+                  <Text h3 className="font-medium">2. Account Confirmation</Text>
                 </div>
               </div>
-            </li>
-            <li>
               <div
                 className="w-full p-4 text-gray-900 bg-gray-100 border border-gray-300 rounded-lg shadow"
                 role="alert"
               >
                 <div className="flex items-center justify-between">
-                  <span className="sr-only">Congratulation</span>
-                  <h3 className="font-medium">3. Congratulation!</h3>
+                  <Text h3 className="font-medium">3. Congratulation!</Text>
                 </div>
               </div>
-            </li>
           </ol>
         </div>
         <div className="w-full max-w-md">
@@ -182,7 +176,7 @@ export default () => {
               </button>
             </div>
             <div className="flex items-center justify-between mt-4">
-              <p className="text-gray-700 text-lg">Already have an account?</p>
+              <Text p className="text-gray-700 text-lg">Already have an account?</Text>
               <Link href="/auth/login" className="text-orange-500 text-lg">
                 Login
               </Link>
@@ -190,12 +184,12 @@ export default () => {
           </form>
         </div>
         <div className="absolute right-1/2 bottom-[60px] hidden md:block">
-          <Link href='/'>
+          <Link href="/">
             <Image
-                src="https://pub-ebc3292441104a07b54e254192a1b246.r2.dev/default-monochrome-black.svg"
-                width={100}
-                height={100}
-                alt="signup"
+              src="https://pub-ebc3292441104a07b54e254192a1b246.r2.dev/default-monochrome-black.svg"
+              width={100}
+              height={100}
+              alt="signup"
             />
           </Link>
         </div>

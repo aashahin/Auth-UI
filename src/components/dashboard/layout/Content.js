@@ -1,10 +1,11 @@
 import {
   UilNewspaper,
-  UilNotebooks,
   UilCommentAltChartLines,
   UilUsersAlt,
 } from "@iconscout/react-unicons";
-import Chart from "@/components/dashboard/utils/chart";
+import {data, dataPie, options} from "@/components/dashboard/utils/chart";
+import {Bar, Pie} from "react-chartjs-2";
+import {Text} from "@nextui-org/react";
 
 export default function ContentDashBoard() {
   return (
@@ -42,50 +43,38 @@ export default function ContentDashBoard() {
             </p>
           </div>
         </div>
-        <div>
-            <div className="mb-4 px-2">
-                <h2 className="text-2xl font-semibold">Visitors</h2>
-            </div>
-          <div className="flex items-center shadow-xl justify-center mb-4 p-8 rounded shadow bg-gray-900 text-white dark:bg-zinc-900">
-            <div className="w-full h-full">
-              <div className="flex flex-col md:flex-row justify-between px-4">
-                <div className="flex md:flex-col gap-4">
-                  <h2 className="text-2xl font-semibold">Monthly</h2>
-                  <h2 className="text-2xl font-semibold">Weekly</h2>
-                  <h2 className="text-2xl font-semibold">Daily</h2>
-                </div>
-                <div className="flex md:flex-col gap-4 py-4 md:py-0">
-                  <h2 className="text-2xl font-semibold">1,200</h2>
-                  <h2 className="text-2xl font-semibold">300</h2>
-                  <h2 className="text-2xl font-semibold">50</h2>
-                </div>
-                <Chart />
+          <div className="mb-4 px-2 my-8">
+            <Text h2 size="$2xl">Visitors</Text>
+          </div>
+        <div className="flex flex-col w-full md:grid md:grid-cols-2 gap-4 mb-4">
+          <div className="flex shadow w-full h-fit py-8 px-4 items-center justify-center rounded bg-gray-100 h-28 dark:bg-zinc-900">
+            <div className="flex flex-col md:flex-row justify-start  md:h-52">
+              <div className="flex md:flex-col gap-4 pr-11 w-1/3">
+                <Text h2 size="$2xl">Monthly</Text>
+                <Text h2 size="$2xl">Weekly</Text>
+                <Text h2 size="$2xl">Daily</Text>
+              </div>
+              <div className="flex justify-start md:flex-col pr-11 gap-4 py-4 md:py-0 w-2/3">
+                <Text h2 size="$2xl">1,200</Text>
+                <Text h2 size="$2xl">300</Text>
+                <Text h2 size="$2xl">50</Text>
+              </div>
+              <div className="w-full flex justify-end md:w-3/3">
+                <Bar data={data} options={options} />
               </div>
             </div>
           </div>
-        </div>
-        <div className="grid grid-cols-2 gap-4 mb-4">
-          <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-zinc-900">
-            <p className="text-2xl text-gray-400 dark:text-gray-500">+</p>
+          <div className="flex items-center shadow h-fit py-8 px-4 justify-center rounded bg-gray-100 dark:bg-zinc-900">
+            <div className="flex h-fit justify-between md:justify-end md:pr-16">
+              <Pie data={dataPie} />
+            </div>
           </div>
-          <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-zinc-900">
-            <p className="text-2xl text-gray-400 dark:text-gray-500">+</p>
-          </div>
-          <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-zinc-900">
-            <p className="text-2xl text-gray-400 dark:text-gray-500">+</p>
-          </div>
-          <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-zinc-900">
-            <p className="text-2xl text-gray-400 dark:text-gray-500">+</p>
-          </div>
-        </div>
-        <div className="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-zinc-900">
-          <p className="text-2xl text-gray-400 dark:text-gray-500">+</p>
         </div>
         <div className="grid grid-cols-2 gap-4">
-          <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-zinc-900">
-            <p className="text-2xl text-gray-400 dark:text-gray-500">+</p>
+          <div className="flex rounded bg-gray-100 p-8 h-96 dark:bg-zinc-900">
+            <Text h2 size="$2xl">Last Users</Text>
           </div>
-          <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-zinc-900">
+          <div className="flex items-center justify-center rounded shadow bg-gray-100 h-28 dark:bg-zinc-900">
             <p className="text-2xl text-gray-400 dark:text-gray-500">+</p>
           </div>
           <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-zinc-900">

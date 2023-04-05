@@ -28,9 +28,7 @@ export default () => {
   };
   const resendCode = async () => {
     try {
-      const { data } = await axios.get(
-        `/user/account-verify-code`
-      );
+      const { data } = await axios.get(`/user/account-verify-code`);
       if (data) {
         toast.success("Successfully resend your verification code.");
         setTimeout(() => {
@@ -130,12 +128,12 @@ export default () => {
           </div>
         </div>
         <div className="absolute right-1/2 bottom-[60px] hidden md:block">
-          <Link href='/'>
+          <Link href="/">
             <Image
-                src="https://pub-ebc3292441104a07b54e254192a1b246.r2.dev/default-monochrome-black.svg"
-                width={100}
-                height={100}
-                alt="signup"
+              src="https://pub-ebc3292441104a07b54e254192a1b246.r2.dev/default-monochrome-black.svg"
+              width={100}
+              height={100}
+              alt="signup"
             />
           </Link>
         </div>
