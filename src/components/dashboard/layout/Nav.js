@@ -49,7 +49,7 @@ export default function NavDashBoard({ handleSidebarToggle }) {
                     bordered
                     size="lg"
                     as="button"
-                    color="default"
+                    color="primary"
                     src={user.info.profilePhoto}
                     name={user.info.firstName || "User"}
                   />

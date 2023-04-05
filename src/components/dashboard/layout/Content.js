@@ -6,8 +6,11 @@ import {
 import {data, dataPie, options} from "@/components/dashboard/utils/chart";
 import {Bar, Pie} from "react-chartjs-2";
 import {Text} from "@nextui-org/react";
-
+import {translation} from "@/translation/english/main"
 export default function ContentDashBoard() {
+  const {articles,comments,users} = translation.dashboard.content.top;
+  const {visits,daily,monthly,weekly} = translation.dashboard.content.middle;
+
   return (
     <div className="p-4 sm:ml-64">
       <div className="p-4 mt-14">
@@ -19,7 +22,7 @@ export default function ContentDashBoard() {
             />
             <p className="text-lg ">
               <span className="pb-2 block text-6xl font-bold">4571</span>
-              <span className="text-xl text-gray-200">Posts</span>
+              <span className="text-xl text-gray-200">{articles}</span>
             </p>
           </div>
           <div className="flex items-center text-white gap-8 shadow-xl justify-center h-48 rounded bg-orange-500 dark:bg-zinc-900">
@@ -29,7 +32,7 @@ export default function ContentDashBoard() {
             />
             <p className="text-lg ">
               <span className="pb-2 block text-6xl font-bold">284</span>
-              <span className="text-xl text-gray-200">Users</span>
+              <span className="text-xl text-gray-200">{users}</span>
             </p>
           </div>
           <div className="flex items-center text-white gap-8 shadow-xl justify-center h-48 rounded bg-orange-500 dark:bg-zinc-900">
@@ -39,7 +42,7 @@ export default function ContentDashBoard() {
             />
             <p className="text-lg ">
               <span className="pb-2 block text-6xl font-bold">486</span>
-              <span className="text-xl text-gray-200">Comments</span>
+              <span className="text-xl text-gray-200">{comments}</span>
             </p>
           </div>
         </div>
@@ -50,9 +53,9 @@ export default function ContentDashBoard() {
           <div className="flex shadow w-full h-fit py-8 px-4 items-center justify-center rounded bg-gray-100 h-28 dark:bg-zinc-900">
             <div className="flex flex-col md:flex-row justify-start  md:h-52">
               <div className="flex md:flex-col gap-4 pr-11 w-1/3">
-                <Text h2 size="$2xl">Monthly</Text>
-                <Text h2 size="$2xl">Weekly</Text>
-                <Text h2 size="$2xl">Daily</Text>
+                <Text h2 size="$2xl">{monthly}</Text>
+                <Text h2 size="$2xl">{weekly}</Text>
+                <Text h2 size="$2xl">{daily}</Text>
               </div>
               <div className="flex justify-start md:flex-col pr-11 gap-4 py-4 md:py-0 w-2/3">
                 <Text h2 size="$2xl">1,200</Text>
