@@ -1,4 +1,10 @@
 export const translation = {
+  general: {
+    title: "WSQ",
+    description: "Wsq is content management system built on speed and simplicity",
+    logo: "https://pub-ebc3292441104a07b54e254192a1b246.r2.dev/default-monochrome-black.svg",
+    favicon: "https://pub-ebc3292441104a07b54e254192a1b246.r2.dev/favicon.svg",
+  },
   dashboard: {
     content: {
       top: {

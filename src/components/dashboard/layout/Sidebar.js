@@ -50,7 +50,7 @@ export default function SidebarDashBoard({ toggleCollapse }) {
           >
             <UilChartPieAlt size={32} color={"#CE5300"} />
             <Text size="$2xl" weight="semibold">
-              {dashboard}
+              Dashboard
             </Text>
           </Link>
           <Collapse
@@ -60,12 +60,12 @@ export default function SidebarDashBoard({ toggleCollapse }) {
             css={{ padding: "0 10px" }}
             title={
               <Text size="$2xl" weight="semibold">
-                {articles}
+                Articles
               </Text>
             }
           >
             <Link
-              href="/wsq/dashboard"
+              href="/wsq/dashboard/articles"
               className="flex items-center  gap-4 p-2 hover:bg-orange-200 rounded-xl dark:hover:bg-zinc-800"
             >
               <UilNotebooks size={28} color={"#CE5300"} />
@@ -74,7 +74,7 @@ export default function SidebarDashBoard({ toggleCollapse }) {
               </Text>
             </Link>
             <Link
-              href="/wsq/dashboard"
+              href="/wsq/dashboard/articles/add"
               className="flex items-center  gap-4 p-2 hover:bg-orange-200 rounded-xl dark:hover:bg-zinc-800"
             >
               <UilFilePlus size={28} color={"#CE5300"} />
@@ -83,7 +83,7 @@ export default function SidebarDashBoard({ toggleCollapse }) {
               </Text>
             </Link>
             <Link
-              href="/wsq/dashboard"
+              href="/wsq/dashboard/comments"
               className="flex items-center  gap-4 p-2 hover:bg-orange-200 rounded-xl dark:hover:bg-zinc-800"
             >
               <UilCommentAltMessage size={28} color={"#CE5300"} />
@@ -104,7 +104,7 @@ export default function SidebarDashBoard({ toggleCollapse }) {
             }
           >
             <Link
-              href="/wsq/dashboard"
+              href="/wsq/dashboard/tags"
               className="flex items-center  gap-4 p-2 hover:bg-orange-200 rounded-xl dark:hover:bg-zinc-800"
             >
               <UilFolderOpen size={28} color={"#CE5300"} />
@@ -113,7 +113,7 @@ export default function SidebarDashBoard({ toggleCollapse }) {
               </Text>
             </Link>
             <Link
-              href="/wsq/dashboard"
+              href="/wsq/dashboard/tags/add"
               className="flex items-center  gap-4 p-2 hover:bg-orange-200 rounded-xl dark:hover:bg-zinc-800"
             >
               <UilFolderPlus size={28} color={"#CE5300"} />
@@ -134,7 +134,7 @@ export default function SidebarDashBoard({ toggleCollapse }) {
             }
           >
             <Link
-              href="/wsq/dashboard"
+              href="/wsq/dashboard/pages"
               className="flex items-center  gap-4 p-2 hover:bg-orange-200 rounded-xl dark:hover:bg-zinc-800"
             >
               <UilCopyAlt size={28} color={"#CE5300"} />
@@ -143,7 +143,7 @@ export default function SidebarDashBoard({ toggleCollapse }) {
               </Text>
             </Link>
             <Link
-              href="/wsq/dashboard"
+              href="/wsq/dashboard/pages/add"
               className="flex items-center  gap-4 p-2 hover:bg-orange-200 rounded-xl dark:hover:bg-zinc-800"
             >
               <UilFileMedical size={28} color={"#CE5300"} />
@@ -164,7 +164,7 @@ export default function SidebarDashBoard({ toggleCollapse }) {
             }
           >
             <Link
-              href="/wsq/dashboard"
+              href="/wsq/dashboard/users"
               className="flex items-center  gap-4 p-2 hover:bg-orange-200 rounded-xl dark:hover:bg-zinc-800"
             >
               <UilCopyAlt size={28} color={"#CE5300"} />
@@ -173,7 +173,7 @@ export default function SidebarDashBoard({ toggleCollapse }) {
               </Text>
             </Link>
             <Link
-              href="/wsq/dashboard"
+              href="/wsq/dashboard/users/add"
               className="flex items-center  gap-4 p-2 hover:bg-orange-200 rounded-xl dark:hover:bg-zinc-800"
             >
               <UilFileMedical size={28} color={"#CE5300"} />
@@ -182,19 +182,19 @@ export default function SidebarDashBoard({ toggleCollapse }) {
               </Text>
             </Link>
           </Collapse>
-          <Link href="/wsq/dashboard" className="flex items-center  gap-4 py-4 px-2 hover:bg-orange-200 dark:hover:bg-zinc-800">
+          <Link href="/wsq/dashboard/reports/" className="flex items-center  gap-4 py-4 px-2 hover:bg-orange-200 dark:hover:bg-zinc-800">
             <UilFileGraph size={32} color={"#CE5300"} />
             <Text size="$2xl" weight="semibold">
                 {reports}
             </Text>
             </Link>
-          <Link href="/wsq/dashboard" className="flex items-center  gap-4 py-4 px-2 hover:bg-orange-200 dark:hover:bg-zinc-800">
+          <Link href="/wsq/dashboard/analytics" className="flex items-center  gap-4 py-4 px-2 hover:bg-orange-200 dark:hover:bg-zinc-800">
             <UilAnalytics size={32} color={"#CE5300"} />
             <Text size="$2xl" weight="semibold">
                 {analytics}
             </Text>
             </Link>
-          <Link href="/wsq/dashboard" className="flex items-center  gap-4 py-4 px-2 hover:bg-orange-200 dark:hover:bg-zinc-800">
+          <Link href="/wsq/dashboard/seetings" className="flex items-center  gap-4 py-4 px-2 hover:bg-orange-200 dark:hover:bg-zinc-800">
             <UilSetting size={32} color={"#CE5300"} />
             <Text size="$2xl" weight="semibold">
                 {settings}

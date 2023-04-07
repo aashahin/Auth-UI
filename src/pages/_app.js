@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/context/theme";
-import { useEffect } from "react";
+import {Suspense, useEffect} from "react";
 import TapNav from "@/components/TapNav";
 import { usePathname } from "next/navigation";
 import { Toaster } from "react-hot-toast";
@@ -10,7 +10,6 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 import {darkTheme, lightTheme} from "@/components/theme/dark";
 
 export default function App({ Component, pageProps }) {
-
   const pathname = usePathname();
   const showHeader =
     !pathname.startsWith("/wsq") && !pathname.startsWith("/auth");

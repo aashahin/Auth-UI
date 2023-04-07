@@ -17,23 +17,3 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
-
-/*[type="text"]:focus,*/
-/*[type="email"]:focus,*/
-/*[type="url"]:focus,*/
-/*[type="password"]:focus,*/
-/*[type="number"]:focus,*/
-/*[type="date"]:focus,*/
-/*[type="datetime-local"]:focus,*/
-/*[type="month"]:focus,*/
-/*[type="search"]:focus,*/
-/*[type="tel"]:focus,*/
-/*[type="time"]:focus,*/
-/*[type="week"]:focus,*/
-/*[multiple]:focus,*/
-/*textarea:focus,*/
-/*select:focus {*/
-/*  outline: none;*/
-/*  border-color: #f66d3b;*/
-/*  box-shadow: 0 0 0 3px rgba(246, 109, 59, 0.5);*/
-/*}*/

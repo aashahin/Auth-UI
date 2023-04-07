@@ -1,7 +1,8 @@
+"use client";
 import { ToggleTheme } from "@/components/ToggleTheme";
 import Link from "next/link";
 import { UilBars } from "@iconscout/react-unicons";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AuthContext } from "@/context/auth";
 import { useRouter } from "next/router";
 import { Dropdown, Text, User } from "@nextui-org/react";
@@ -55,7 +56,7 @@ export default function NavDashBoard({ handleSidebarToggle }) {
                   />
                 </Dropdown.Trigger>
                 <Dropdown.Menu color="warning" aria-label="Avatar Actions">
-                  <Dropdown.Item key="profile" css={{ height: "$18" }}>
+                  <Dropdown.Item key="profile" css={{ height: "$18" }} textValue="Profile">
                     <Text b color="inherit" css={{ d: "flex" }}>
                       Signed in as
                     </Text>
@@ -63,19 +64,19 @@ export default function NavDashBoard({ handleSidebarToggle }) {
                       {user.info.email}
                     </Text>
                   </Dropdown.Item>
-                  <Dropdown.Item key="settings" withDivider>
+                  <Dropdown.Item key="settings" withDivider textValue="My Settings">
                     My Settings
                   </Dropdown.Item>
 
-                  <Dropdown.Item key="analytics">Analytics</Dropdown.Item>
-                  <Dropdown.Item key="system">System</Dropdown.Item>
-                  <Dropdown.Item key="configurations">
+                  <Dropdown.Item key="analytics" textValue="Analytics">Analytics</Dropdown.Item>
+                  <Dropdown.Item key="system" textValue="Settings">Settings</Dropdown.Item>
+                  <Dropdown.Item key="configurations" textValue="Configurations">
                     Configurations
                   </Dropdown.Item>
-                  <Dropdown.Item key="help_and_feedback" withDivider>
+                  <Dropdown.Item key="help_and_feedback" withDivider textValue="Help">
                     Help & Feedback
                   </Dropdown.Item>
-                  <Dropdown.Item key="logout" color="error" withDivider>
+                  <Dropdown.Item key="logout" color="error" withDivider textValue="Logout">
                     <Link href="/" onClick={logout}>
                       Logout
                     </Link>

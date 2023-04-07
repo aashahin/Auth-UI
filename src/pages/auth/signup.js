@@ -58,7 +58,7 @@ export default () => {
         <title>Sign up</title>
       </Head>
       <div className="h-screen w-full flex items-center justify-center bg-zinc-200 dark:bg-gray-900">
-        <div className="w-full w-fit bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 dark:bg-zinc-900 dark:text-white">
+        <div className="max-w-md bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 dark:bg-zinc-900 dark:text-white">
           <div className="mb-4">
             <h1 className="text-2xl font-bold text-black dark:text-white">
               Sign up
@@ -166,15 +166,16 @@ export default () => {
             </Text>
           </div>
         </div>
-        <Image
-          src={
-            "https://pub-ebc3292441104a07b54e254192a1b246.r2.dev/default-monochrome-black.svg"
-          }
-          alt={"WSQ"}
-          width={100}
-          height={100}
-          className="absolute bottom-8 mb-4 mr-4"
-        />
+        <Link href="/" className="absolute bottom-8 mb-4 mr-4">
+          <Image
+              src={
+                "https://pub-ebc3292441104a07b54e254192a1b246.r2.dev/default-monochrome-black.svg"
+              }
+              alt={"WSQ"}
+              width={100}
+              height={100}
+          />
+        </Link>
       </div>
     </>
   );
