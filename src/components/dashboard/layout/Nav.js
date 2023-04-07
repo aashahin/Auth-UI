@@ -13,13 +13,7 @@ export default function NavDashBoard({ handleSidebarToggle }) {
 
   const logout = () => {
     localStorage.removeItem("user");
-    setUser({
-      info: {
-        profilePhoto:
-          "https://pub-ebc3292441104a07b54e254192a1b246.r2.dev/bubble-gum-avatar-icon.png",
-      },
-    });
-    router.push("/");
+    router.replace("/").then(r => setUser({}));
   };
   return (
     <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-900 dark:border-gray-700">
